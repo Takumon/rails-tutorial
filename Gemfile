@@ -3,7 +3,7 @@ source "https://rubygems.org"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "7.2.2"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
-gem "sprockets-rails", "3.4.2"
+gem "sprockets-rails", "3.5.2"
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "1.6.1"
 # Use the Puma web server [https://github.com/puma/puma]

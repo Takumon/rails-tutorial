@@ -4,7 +4,7 @@ source "https://rubygems.org"
 gem "rails", "7.2.2"
 
 gem "bcrypt", "3.1.20"
-
+gem "pg", "1.5.9"
 gem "bootstrap-sass", "3.4.1"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails", "3.4.2"
@@ -60,8 +60,4 @@ group :test do
   gem "selenium-webdriver", "4.8.3"
   gem "guard", "2.19.0"
   gem "rails-controller-testing", "1.0.5"
-end
-
-group :production do
-  gem "pg", "1.5.9"
 end

@@ -307,7 +307,7 @@ GEM
       unicode-emoji (~> 4.0, >= 4.0.4)
     unicode-emoji (4.0.4)
     useragent (0.16.11)
-    web-console (4.2.0)
+    web-console (4.2.1)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
       bindex (>= 0.4.0)
@@ -345,7 +345,7 @@ DEPENDENCIES
   stimulus-rails (= 1.2.1)
   turbo-rails (= 1.4.0)
   tzinfo-data (= 1.2024.2)
-  web-console (= 4.2.0)
+  web-console (= 4.2.1)
 
 RUBY VERSION
    ruby 3.3.5p100

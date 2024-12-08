@@ -31,7 +31,6 @@ environment ENV.fetch("RAILS_ENV", "development")
 # Specify the PID file. Defaults to tmp/pids/server.pid in development.
 # In other environments, only set the PID file if requested.
 pidfile ENV["PIDFILE"] if ENV["PIDFILE"]
-# workers ENV.fetch("WEB_CONCURRENCY", 4)
 
 # Allow puma to be restarted by `bin/rails restart` command.
 preload_app!

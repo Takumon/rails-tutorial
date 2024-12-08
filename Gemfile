@@ -2,6 +2,10 @@ source "https://rubygems.org"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "7.2.2"
+
+gem "bcrypt", "3.1.20"
+
+gem "bootstrap-sass", "3.4.1"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails", "3.4.2"
 # Use sqlite3 as the database for Active Record
@@ -55,4 +59,9 @@ group :test do
   gem "capybara", "3.38.0"
   gem "selenium-webdriver", "4.8.3"
   gem "guard", "2.19.0"
+  gem "rails-controller-testing", "1.0.5"
+end
+
+group :production do
+  gem "pg", "1.5.9"
 end

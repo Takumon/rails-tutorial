@@ -1,11 +1,23 @@
-<p style="color: green"><%= notice %></p>
-
-<%= render @user %>
-
-<div>
-  <div>ユーザー詳細</div>
-  <%= link_to "Edit this user", edit_user_path(@user) %> |
-  <%= link_to "Back to users", users_path %>
-
-  <%= button_to "Destroy this user", @user, method: :delete %>
+<% provide(:title, @user.name) %>
+<div class="row">
+  <aside class="col-md-r">
+    <section class="user_info">
+      <h1>
+        <%= gravatar_for @user, size: 200 %>
+        <%= @user.name %>
+      </h1>
+    </section>
+  </aside>
+</div>
+<div class="row">
+  <div class="label-and-value_label">メールアドレス</div>
+  <div class="label-and-value_value"><%= @user.email %></div>
+</div>
+<div class="row">
+  <div class="label-and-value_label">作成日時</div>
+  <div class="label-and-value_value"><%= @user.created_at %></div>
+</div>
+<div class="row">
+  <div class="label-and-value_label">更新日時</div>
+  <div class="label-and-value_value"><%= @user.updated_at %></div>
 </div>

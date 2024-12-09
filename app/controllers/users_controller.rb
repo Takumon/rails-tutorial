@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  include SessionsHelper
+
   def new
     @user = User.new
   end
@@ -11,9 +13,10 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:success] = "Welcome to the Sample App!"
+      log_in @user
       redirect_to user_url(@user)
     else
-      render 'new', status: :unprocessable_entity
+      render "new", status: :unprocessable_entity
     end
   end
 

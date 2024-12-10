@@ -12,7 +12,7 @@ class User < ApplicationRecord
                     uniqueness: true
 
   has_secure_password
-  validates :password, presence: true, length: { minimum: 6 }
+  validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
 
   def remember
     self.remember_token = User.new_token
@@ -32,6 +32,8 @@ class User < ApplicationRecord
     return false if self.remember_digest.nil?
     BCrypt::Password.new(self.remember_digest).is_password?(remember_token)
   end
+
+  self.per_page = 10
 
   class << self
     def digest(str)

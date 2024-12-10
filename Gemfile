@@ -1,12 +1,15 @@
 source "https://rubygems.org"
 
-ruby '3.3.5'
-
+ruby "3.3.5"
+gem "typeprof", "0.21.11"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "7.2.2"
-
+gem "ostruct", "0.6.1"
 gem "bcrypt", "3.1.20"
 gem "pg", "1.5.9"
+gem "faker", "3.5.1"
+gem "will_paginate", "4.0.1"
+gem "will_paginate-bootstrap-style", "0.3.0"
 gem "bootstrap-sass", "3.4.1"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails", "3.4.2"
@@ -32,20 +35,20 @@ gem "jbuilder", "2.11.5"
 # gem "bcrypt", "~> 3.1.7"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem "tzinfo-data", '1.2024.2', platforms: %i[ windows jruby ]
+gem "tzinfo-data", "1.2024.2", platforms: %i[ windows jruby ]
 
 # Reduces boot times through caching; required in config/boot.rb
-gem "bootsnap", '1.18.4', require: false
+gem "bootsnap", "1.18.4", require: false
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", '1.9.2', platforms: %i[ mri windows ], require: "debug/prelude"
+  gem "debug", "1.9.2", platforms: %i[ mri windows ], require: "debug/prelude"
 
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
-  gem "brakeman", '6.2.2', require: false
+  gem "brakeman", "6.2.2", require: false
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false

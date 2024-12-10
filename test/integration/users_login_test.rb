@@ -1,6 +1,11 @@
 require "test_helper"
 
-class UsersLoginTest < ActionDispatch::IntegrationTest
+class UsersLogin < ActionDispatch::IntegrationTest
+  def setup
+    @user = users(:michael)
+  end
+end
+class UsersLoginTest < UsersLogin
   def setup
     @user = users(:michael)
   end

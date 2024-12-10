@@ -11,7 +11,7 @@ class UsersIndexTest < ActionDispatch::IntegrationTest
     get users_path
     assert_template "users/index"
     assert_select "ul.pagination", count: 2
-    User.paginate(page: 1).each do |user|
+    User.where(activated: true).paginate(page: 1).each do |user|
       assert_select "a[href=?]", user_path(user), text: user.name, count: 1
       assert_select "a[href=?]", user_path(user), text: "delete", count: user == @admin ? 0 :1
     end
@@ -27,7 +27,7 @@ class UsersIndexTest < ActionDispatch::IntegrationTest
     get users_path
     assert_template "users/index"
     assert_select "ul.pagination", count: 2
-    User.paginate(page: 1).each do |user|
+    User.where(activated: true).paginate(page: 1).each do |user|
       assert_select "a[href=?]", user_path(user), text: user.name, count: 1
       assert_select "a[href=?]", user_path(user), text: "delete", count: 0
     end

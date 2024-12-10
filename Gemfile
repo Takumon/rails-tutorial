@@ -24,7 +24,7 @@ gem "turbo-rails", "1.4.0"
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails", "1.2.1"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
-gem "jbuilder", "2.11.5"
+gem "jbuilder", "2.13.0"
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 

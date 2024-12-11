@@ -1,23 +1,33 @@
 <% provide(:title, @user.name) %>
 <div class="row">
-  <aside class="col-md-r">
+  <aside class="col-md-4">
     <section class="user_info">
       <h1>
         <%= gravatar_for @user, size: 200 %>
         <%= @user.name %>
       </h1>
+      <div class="row">
+        <div class="label-and-value_label">メールアドレス</div>
+        <div class="label-and-value_value"><%= @user.email %></div>
+      </div>
+      <div class="row">
+        <div class="label-and-value_label">作成日時</div>
+        <div class="label-and-value_value"><%= @user.created_at %></div>
+      </div>
+      <div class="row">
+        <div class="label-and-value_label">更新日時</div>
+        <div class="label-and-value_value"><%= @user.updated_at %></div>
+      </div>
     </section>
   </aside>
-</div>
-<div class="row">
-  <div class="label-and-value_label">メールアドレス</div>
-  <div class="label-and-value_value"><%= @user.email %></div>
-</div>
-<div class="row">
-  <div class="label-and-value_label">作成日時</div>
-  <div class="label-and-value_value"><%= @user.created_at %></div>
-</div>
-<div class="row">
-  <div class="label-and-value_label">更新日時</div>
-  <div class="label-and-value_value"><%= @user.updated_at %></div>
+
+  <div class="col-md-8">
+    <% if @user.microposts.any? %>
+      <h3>Microposts (<%= @user.microposts.count %>)</h3>
+      <ol class="microposts">
+        <%= render @microposts %>
+      </ol>
+      <%= will_paginate @microposts %>
+    <% end %>
+  </div>
 </div>

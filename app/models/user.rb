@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :microposts, dependent: :destroy
+  self.per_page = 10
   attr_accessor :remember_token, :activation_token, :reset_token
 
   before_save :downcase_email
@@ -61,7 +63,9 @@ class User < ApplicationRecord
     self.reset_sent_at <  2.hours.ago
   end
 
-  self.per_page = 10
+  def feed
+    Micropost.where("user_id = ?", id)
+  end
 
   class << self
     def digest(str)

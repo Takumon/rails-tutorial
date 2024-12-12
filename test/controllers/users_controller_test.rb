@@ -64,4 +64,14 @@ class UserControllerTest < ActionDispatch::IntegrationTest
     assert_response :see_other
     assert_redirected_to root_url
   end
+
+  test "未ログイン時にフォロー一覧ページにアクセスするとリダイレクトされる" do
+    get following_user_path(@user)
+    assert_redirected_to login_url
+  end
+
+  test "未ログイン時にフォロワー一覧ページにアクセスするとリダイレクトされる" do
+    get followers_user_path(@user)
+    assert_redirected_to login_url
+  end
 end

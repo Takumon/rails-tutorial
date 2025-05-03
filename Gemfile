@@ -23,7 +23,7 @@ gem "importmap-rails", "1.1.5"
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails", "1.4.0"
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
-gem "stimulus-rails", "1.2.1"
+gem "stimulus-rails", "1.3.4"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder", "2.11.5"
 # Use Redis adapter to run Action Cable in production
